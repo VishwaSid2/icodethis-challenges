@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .slider-container {
+        position: relative;
+        width: 200px;
+        margin: auto;
+      }
+
+      .slider {
+        width: 100%;
+        appearance: none;
+        transform: rotate(-90deg);
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform-origin: center;
+      }
+
+      .slider::-webkit-slider-thumb {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #3498db;
+        cursor: pointer;
+      }
+
+      .slider-output {
+        text-align: center;
+        font-size: 1.5em;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider-container">
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value="50"
+        class="slider"
+        id="mySlider"
+      />
+      <div class="slider-output" id="sliderOutput">50</div>
+    </div>
+
+    <script></script>
+  </body>
+</html>
