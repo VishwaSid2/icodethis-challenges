@@ -4,28 +4,37 @@
     <title>07-11-2023 Rating Boxes?</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="root">
       <div class="one-line">
-        <div class="one-icons">
+        <div class="one-icons active">
           <div class="circle"></div>
           <span class="circle-title">Audio</span>
         </div>
-        <div class="one-icons">
+        <div class="one-icons ongoing">
           <div class="circle"></div>
           <span class="circle-title">Video</span>
         </div>
         <div class="one-icons">
           <div class="circle"></div>
-          <span class="circle-title">Performance</span>
+          <span class="circle-title-three">Performance</span>
         </div>
       </div>
       <div class="two-rating">
         <div class="two-top">
-          <span class="two-line active"></span>
-          <span class="two-line"></span>
+          <div class="spans">
+            <span class="two-line active"></span>
+            <span class="two-line"></span>
+          </div>
           <p>Rate your experience</p>
         </div>
         <div class="two-bottom">
@@ -44,11 +53,11 @@
         </div>
         <div class="three-bottom">
           <ul>
-            <li>*</li>
-            <li>*</li>
-            <li>*</li>
-            <li>*</li>
-            <li>*</li>
+            <li><i class="fa-solid fa-star"></i></li>
+            <li><i class="fa-regular fa-star"></i></li>
+            <li><i class="fa-regular fa-star"></i></li>
+            <li><i class="fa-regular fa-star"></i></li>
+            <li><i class="fa-regular fa-star"></i></li>
           </ul>
         </div>
       </div>
@@ -56,15 +65,20 @@
         <p>What didn't worked properly ?</p>
         <ul>
           <li>
-            <label for="">Video was blurry</label> <input type="checkbox" />
+            <input type="checkbox" id="blur" />
+            <label for="blur">Video was blurry</label>
           </li>
           <li>
-            <label for="">Sound wasn't working</label> <input type="checkbox" />
+            <input id="sound" type="checkbox" />
+            <label for="sound">Sound wasn't working</label>
           </li>
           <li>
-            <label for="">App was crashing</label> <input type="checkbox" />
+            <input type="checkbox" id="crash" />
+            <label for="crash">App was crashing</label>
           </li>
-          <li><label for="">Else</label> <input type="checkbox" /></li>
+          <li>
+            <input type="checkbox" id="else" /><label for="else">Else</label>
+          </li>
         </ul>
       </div>
     </div>
