@@ -6,37 +6,37 @@ const profileData = [
     vision: "Hydro",
     online: "dnd",
     image:
-      "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Kamisato_Ayato_Character_Card.png/revision/latest",
+      "https://static.wikia.nocookie.net/gensin-impact/images/9/9e/Kamisato_Ayato_Character_Card.png",
   },
   {
     name: "Kokomi",
     vision: "Hydro",
     online: "true",
     image:
-      "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Sangonomiya_Kokomi_Character_Card.png/revision/latest?cb=20230302031258",
+      "https://static.wikia.nocookie.net/gensin-impact/images/d/d3/Sangonomiya_Kokomi_Character_Card.png",
   },
   {
     name: "Venti",
     vision: "Anemo",
     online: "false",
     image:
-      "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Venti_Character_Card.png/revision/latest?cb=20230519022324",
+      "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Venti_Character_Card.png",
   },
   {
     name: "Diona",
     vision: "Cryo",
     online: "true",
     image:
-      "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Diona_Character_Card.png/revision/latest",
+      "https://static.wikia.nocookie.net/gensin-impact/images/3/31/Diona_Character_Card.png",
   },
 ];
 btn.addEventListener("click", more);
 function more() {
   btn.style.display = "none";
-  profileData.forEach((e) => {
+  profileData.forEach((e, idx) => {
     console.log(e.vision, ...profileData);
-    const ht = `
-        <div class="profile">
+    const elt = `
+        <div class="profile" id="${e.name}">
         <div class="profile-pic">
         <img
         src="${e.image}"
@@ -55,7 +55,8 @@ function more() {
             </div>
           </div>
         </div>
+        <!--${idx + 4} rd-->
     `;
-    profilesection.innerHTML += ht;
+    profilesection.innerHTML += elt;
   });
 }

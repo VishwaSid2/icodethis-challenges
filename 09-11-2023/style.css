@@ -30,8 +30,10 @@ html {
 }
 button {
   position: absolute;
-  top: 220px;
-  padding: 1rem 1.5rem;
+  top: -60px;
+  border: none;
+  outline: none;
+  padding: 0.75rem 1.5rem;
   background-color: royalblue;
   color: rgb(255, 255, 255);
   cursor: pointer;
@@ -49,6 +51,7 @@ button {
   filter: drop-shadow(1px 1px 10px #191b1d);
   padding: 2rem 3rem;
   border-radius: 15px;
+  position: relative;
   transform: scale(1.8);
 }
 .profile {
