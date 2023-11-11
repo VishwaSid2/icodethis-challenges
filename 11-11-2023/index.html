@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>11-11-2023 Quiz UI</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Mulish:wght@300;400;500;600;700&family=Poppins:wght@400;500;600&family=Roboto:wght@400;500;700&family=Urbanist:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="Images/11-11-2023 quiz_app.webp" />
+  </head>
+  <body>
+    <div class="root">
+      <div class="quiz-question container">
+        <div class="top">
+          <div class="top-width-control">
+            <ul>
+              <li><span class="correct">2</span>correct</li>
+              <li><span class="wrong">1</span>wrong</li>
+            </ul>
+            <span class="timer">24:02</span>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="quiz-question">
+            <p>
+              Question <span class="question-count">3</span>
+              <span class="remaining-questions">(23 remaining)</span>
+            </p>
+            <h1 class="question-title">
+              Varius venenatis quis libero. Tortor feugiat, urna erat blandit,
+              wisi mi, non eget orci fermentum?
+            </h1>
+            <p>Answer options</p>
+            <ul class="options">
+              <li class="option a">
+                <span>A</span>Feugiat viverra in in vivamus quis
+              </li>
+              <li class="option b">
+                <span>B</span>Molestie nulla tristique nulla
+              </li>
+              <li class="option c">
+                <span>C</span>Sapien sed lectus in, posuere eros ad nam non duis
+              </li>
+            </ul>
+          </div>
+          <div class="answers">
+            <a href="#">ANSWER LATER</a>
+            <a href="#">SEND ANSWER</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
