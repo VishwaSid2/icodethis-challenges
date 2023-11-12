@@ -31,6 +31,7 @@
     rgba(254, 159, 130, 1) 19%,
     rgba(254, 115, 102, 0.884) 50%
   ); /* css gradient.io */
+  position: relative;
 }
 
 html {
@@ -159,4 +160,36 @@ html {
 .reminders ul li.active span {
   background-color: #e6e5e5b1;
   color: #2b4148;
+}
+@media only screen and (min-width: 0px) {
+  .root::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 50;
+    background-color: black;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .app-container {
+    transform: scale(0.9);
+  }
+  .root::before {
+    display: none;
+  }
+  @media only screen and (min-width: 425px) {
+    .app-container {
+      transform: scale(1);
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    .app-container {
+      transform: scale(1.2);
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .app-container {
+      transform: scale(1.6);
+    }
+  }
 }

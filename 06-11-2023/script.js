@@ -25,7 +25,7 @@ function time() {
     "December",
   ];
   const FD = {
-    date: clock.getDate() < 12 ? "0" + clock.getDate() : clock.getDate(),
+    date: clock.getDate() < 10 ? "0" + clock.getDate() : clock.getDate(),
     hours: clock.getHours() < 10 ? "0" + clock.getHours() : clock.getHours(),
     minutes:
       clock.getMinutes() < 10 ? "0" + clock.getMinutes() : clock.getMinutes(),

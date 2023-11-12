@@ -130,3 +130,20 @@ html {
   line-height: 2.3rem;
   margin: 6rem auto 2rem auto;
 }
+@media only screen and (min-width: 0px) {
+  .root {
+    position: relative;
+  }
+  .root:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: black;
+    z-index: 20;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .root:before {
+    display: none;
+  }
+}
