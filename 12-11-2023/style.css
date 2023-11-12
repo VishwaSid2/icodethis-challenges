@@ -5,10 +5,10 @@
     rgba(186, 105, 228, 1) 36%,
     rgba(220, 99, 231, 1) 63%
   );
-  --top-bg: #f5f2f7;
+  --top-bg: #ecebed;
   --href-btn-color: #4f8bcb;
   --bottom-color: #fbf8fd;
-  --x:#fbf8fd
+  --x: #fbf8fd;
   --heading-color: #68676c;
   ---item-title-color: #3a85cb;
   --item-desc-color: #949494;
@@ -32,6 +32,184 @@ html {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  background: rgb(252,70,107);
-  background: radial-gradient(circle, rgba(252,70,107,1) 1%, rgba(63,94,251,1) 100%);
+  background: rgb(252, 70, 107);
+  background: radial-gradient(
+    circle,
+    rgba(252, 70, 107, 1) 1%,
+    rgba(63, 94, 251, 1) 100%
+  );
+}
+.wishlist {
+  background-color: var(--bottom-color);
+  padding: 3.3rem 2.95rem;
+  border-radius: 1rem;
+  width: 52%;
+  /* this aaporach is wrong */
+}
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.75rem;
+}
+.top ul li {
+  font-weight: 700;
+  font-size: 1.35rem;
+}
+
+.top ul li:first-child {
+  letter-spacing: 0.51px;
+  font-size: 1.95rem;
+  margin-bottom: 2px;
+}
+.top a {
+  padding: 1rem 2rem;
+  letter-spacing: 0.33px;
+  background-color: #fff;
+  color: var(--href-btn-color);
+  font-size: 1.3rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.15s ease-in-out;
+}
+.top a:hover {
+  background-color: var(--href-btn-color);
+  color: var(--white);
+}
+.bottom {
+  /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch; */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-content: center;
+}
+/* .items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    border: 1px solid royalblue;
+} */
+.items-list {
+  background-color: var(--white);
+  border-radius: 1rem;
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
+  transition: inherit;
+}
+.items-list:hover {
+  background-color: #cbcbcb36;
+  color: white;
+}
+.item::after {
+  content: "x";
+  top: 5%;
+  right: 1%;
+  position: absolute;
+  text-align: center;
+  font-size: 1.33rem;
+  padding: 0.5rem 0.95rem;
+  border-radius: 50%;
+  background-color: #fbf8fd;
+  color: var(--item-desc-color);
+  transition: all 0.15s ease;
+  z-index: 2;
+}
+.item:hover::after {
+  color: black;
+  background-color: rgba(0, 0, 0, 0.337);
+  cursor: pointer;
+  z-index: 2;
+}
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: center; */
+  align-items: flex-end;
+  padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+}
+.bottom .item-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.6rem;
+}
+.bottom .item-name img {
+  width: 85px;
+  height: 85px;
+  object-fit: contain;
+  object-position: center;
+  transition: inherit;
+  border: 0.5px solid royalblue;
+}
+.bottom .item-name img:hover {
+  cursor: pointer;
+  filter: hue-rotate(150deg);
+}
+.item-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 0.5rem;
+  width: 50%;
+}
+.item-price p {
+  font-weight: 700;
+  color: var(--heading-color);
+  font-size: 1.8rem;
+}
+.item-price a {
+  padding: 0.75rem 2rem;
+  color: #fff;
+  background: var(--btn-bg);
+  background: var(--btn-bg-g);
+  font-size: 1.43rem;
+  letter-spacing: 0.35px;
+  border-radius: 3rem;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+.item-price a::before {
+  content: url("Images/cart-shopping-solid.svg");
+  display: block;
+  width: 15px;
+  height: 10px;
+  margin-top: -5px;
+  filter: invert(1);
+  /* position: absolute;
+  top:44%;
+  left:13%;
+  transform: translate(-50%,-50%); */
+}
+.item-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+.item-description h1 {
+  color: var(---item-title-color);
+  font-size: 1.98rem;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+}
+.item-description p {
+  color: var(--item-desc-color);
+  font-size: 1.4rem;
+  margin-left: 0.35rem;
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  cursor: default;
 }
