@@ -1,0 +1,228 @@
+:root {
+  --background-root: #039be5;
+  --bg-gra-backup: rgb(59, 86, 100);
+  --background-gr-full: linear-gradient(
+    122deg,
+    rgba(59, 86, 100, 1) 33%,
+    rgba(43, 49, 59, 1) 69%
+  );
+  --december: #9ca3a8;
+  --line: #f10f5f;
+  --white: #fff;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: all 0.15s ease-in-out;
+}
+
+.root {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--background-root);
+  font-family: "Poppins";
+}
+.events {
+  /* height: 570px; */
+  /* width: 380px; */
+  border: 1px solid royalblue;
+  background: #fff;
+  filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.3));
+}
+.top {
+  /* height: 220px; */
+  background-color: var(--bg-gra-backup);
+  background: var(--background-gr-full);
+  padding: 0.35rem 1rem 0.4rem 1rem;
+  position: relative;
+  z-index: 6;
+  filter: drop-shadow(1px 1px 9px rgba(65, 105, 225, 0.608));
+}
+.top::before {
+  content: url();
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 7;
+}
+.top nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 1rem 0 1rem;
+}
+.top-nav,
+.top-profile {
+  position: relative;
+  z-index: 8;
+}
+.icons {
+  display: block;
+  font-size: 20px;
+  color: var(--white);
+}
+.icons.icons2 {
+  display: block;
+  font-size: 20px;
+  color: var(--white);
+  position: relative;
+  z-index: 8;
+}
+.icons2::after {
+  content: "";
+  background-color: royalblue;
+  position: absolute;
+  right: -4px;
+  top: 0px;
+  padding: 0.42rem;
+  border-radius: 50%;
+  z-index: 8;
+}
+.top-profile {
+  padding: 0.9rem 0 0.81rem 0;
+}
+.top-profile img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.3));
+}
+.info-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.1rem;
+}
+.top-profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--white);
+}
+.top-profile-info h1 {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.top-month {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.3rem 0 0.35rem 0;
+}
+.top-month a {
+  color: var(--december);
+  letter-spacing: 0.5px;
+  transition: inherit;
+}
+.top-month a.active {
+  position: relative;
+  color: var(--white);
+}
+.active::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -52%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--line);
+  border-radius: 3px;
+}
+/* botttom */
+.bottom {
+  padding: 1.65rem 1rem 2.6rem 1rem;
+  display: flex;
+  flex-direction: column;
+  /* nice also with out cloumn use row for a change */
+}
+.event-handler {
+  border-left: 1px solid black;
+  position: relative;
+  padding: 4px 0px 4px 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+.event-handler::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: red;
+  outline: 4px solid white;
+}
+.event-details h2 {
+  font-size: 16px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+.event-details p {
+  margin-top: -3px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.event-details .spans {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+.event-details span {
+  font-size: 13px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.btn {
+  background: var(--bg-gra-backup);
+  color: var(--white);
+  background: var(--background-gr-full);
+  font-size: 11px;
+  width: 95px;
+  height: 26px;
+  border-radius: 20px;
+  text-align: center;
+  align-self: flex-start;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.btn a {
+  display: inline-block;
+  padding: 5px 0px;
+  height: 100%;
+  width: 100%;
+  color: inherit;
+}
+.btn a i {
+  margin-right: 5px;
+  transform: rotate(316deg);
+}
+.btn.sold-out {
+  color: gray;
+  background: rgba(128, 128, 128, 0.27);
+}
