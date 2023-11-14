@@ -43,9 +43,18 @@
   position: relative;
   z-index: 6;
   filter: drop-shadow(1px 1px 9px rgba(65, 105, 225, 0.608));
+  overflow: hidden;
 }
+.top::after {
+  content: url("Images/Right\ eclipse.png");
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+}
+
 .top::before {
-  content: url();
+  content: url("Images/left\ eclipse.png");
   position: absolute;
   top: 0;
   left: 0;
