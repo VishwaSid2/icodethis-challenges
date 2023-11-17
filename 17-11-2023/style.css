@@ -1,6 +1,6 @@
 :root {
   --bg: #cbeaeb;
-  --card1: #8092c3;
+  --card1: rgba(128, 146, 195, 0.4);
   --stock: #85bc46;
   --btn: #3e6bd7;
 }
@@ -30,7 +30,8 @@ html {
   color: #000;
   border-radius: 2rem;
   width: 345px;
-  height: 380px;
+  /* height: 380px; */
+  backdrop-filter: blur(2px);
 }
 .cart {
   position: relative;
@@ -41,4 +42,127 @@ html {
   border-radius: 2rem;
   z-index: -1;
   background-color: #fff;
+  padding: 3.1rem 3rem 3rem 3rem;
+}
+.cart h1 {
+  font-size: 1.7rem;
+  margin-bottom: 0.35rem;
+}
+.cart h1 + p {
+  font-size: 1.2rem;
+}
+.products {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.6rem;
+  border-bottom: 2px solid #00000034;
+  padding: 0.15rem 0 1.75rem 0;
+}
+.products img {
+  width: 80px;
+  height: 80px;
+  transform: scaleX(-1) rotate(2deg);
+  /* border: 1px solid var(--stock); */
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+.products-info {
+  height: 100%;
+  width: 100%;
+}
+.products-info p {
+  font-size: 1.26rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+.products-info .stock-status {
+  background-color: var(--stock);
+  padding: 0.5rem 1.35rem;
+  font-size: 1.13rem;
+  letter-spacing: 0.31px;
+  color: #fff;
+  border-radius: 2rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+  margin-top: 0.4rem;
+}
+.quantity {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.45rem;
+}
+.products-info .quantity a:first-child {
+  padding: 0.1rem 1rem;
+  text-align: center;
+}
+.products-info .quantity a {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  font-size: 2.5rem;
+  background-color: #6682e4;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+}
+.quantity input {
+  width: 3rem;
+  padding: 0.75rem 0.5rem;
+  outline: none;
+  border: 2px solid #0000005f;
+  text-align: center;
+  border-radius: 0.75rem;
+}
+.amount-brief {
+  margin-top: 2.5rem;
+}
+.amount-brief p {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.65rem 0;
+  font-size: 1.25rem;
+  letter-spacing: 0.25px;
+}
+.amount-brief span {
+  display: inline-block;
+}
+.amount-brief a {
+  display: block;
+}
+.price {
+  font-weight: 600;
+}
+.code {
+  color: #6682e4;
+  font-size: 1.25rem;
+  transition: inherit;
+}
+.code:hover {
+  text-decoration: none;
+  color: royalblue;
+}
+.amount-brief a:last-child {
+  display: block;
+  width: 101%;
+  margin-inline: auto;
+  margin-top: 2rem;
+  color: white;
+  text-align: center;
+  padding: 0.75rem 0rem;
+  font-size: 1.55rem;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  border-radius: 1.6rem;
+  background-color: #3e6bd7;
+  transition: inherit;
+}
+.amount-brief a:last-child:hover {
+  filter: brightness(0.9);
+  opacity: 0.8;
 }
