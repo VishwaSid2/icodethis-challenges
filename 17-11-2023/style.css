@@ -22,6 +22,7 @@ html {
   background-color: var(--bg);
   display: grid;
   place-items: center;
+  overflow: hidden;
 }
 .bg-cart {
   position: relative;
@@ -165,4 +166,35 @@ html {
 .amount-brief a:last-child:hover {
   filter: brightness(0.9);
   opacity: 0.8;
+}
+/* media queries for this site for all display size */
+@media only screen and (min-width: 320px) {
+  .bg-cart {
+    width: 300px;
+  }
+  .cart {
+    transform: translate(0px, 2rem);
+  }
+}
+@media only screen and (min-width: 375px) {
+  .bg-cart {
+    width: 310px;
+  }
+  .cart {
+    transform: translate(1.9rem, 2rem);
+  }
+}
+@media only screen and (min-width: 420px) {
+  .bg-cart {
+    width: 325px;
+  }
+  .cart {
+    transform: translate(4rem, 5rem);
+    margin-bottom: 5rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .bg-cart {
+    width: 345px;
+  }
 }

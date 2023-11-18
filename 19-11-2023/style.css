@@ -1,0 +1,206 @@
+:root {
+  --background: #2f323f;
+  --card-pink: #df51ca;
+  --card-red: #f13d91;
+  --card-third: #a370e6;
+  --bottom: #37474f;
+  --skip: #929b9f;
+  --dot-bg: #263238;
+  --white: #fff;
+}
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: all 0.15s ease-in-out;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+.root {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--background);
+  color: var(--white);
+}
+.card-holder {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+.card {
+  width: 295px;
+  /* height: 350px; */
+  padding: 1rem;
+}
+.card .top {
+  padding: 5rem 2rem 9rem 2rem;
+  margin: 0 auto;
+  /* height: 70%; */
+  text-align: center;
+}
+.card .top .top-img {
+}
+.card .top .top-img img {
+  display: block;
+  width: 70px;
+  height: 70px;
+  filter: invert(1) drop-shadow(10px 1px 18px #0000009c);
+  margin: 0 auto;
+  object-fit: contain;
+  object-position: center;
+  margin-bottom: 0.7rem;
+}
+.card .top .top-img h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.text {
+  width: 97%;
+  font-size: 1.25rem;
+  margin: 1rem auto 0rem auto;
+}
+.bottom {
+  background-color: var(--bottom);
+  padding: 2.5rem 0;
+  /* height: 30%; */
+  margin: 0 auto;
+  position: relative;
+}
+.waves {
+  /* height: 100px; */
+  /* width: 100%; */
+  position: absolute;
+  position: relative;
+  bottom: -30%;
+}
+.waves .wave {
+  background: url("Images/waveold.png");
+  background-size: cover;
+  background-repeat: repeat;
+  height: 70px;
+  width: 100%;
+  position: absolute;
+  top: -90px;
+  left: 0%;
+  right: 0%;
+  transition: inherit;
+  /* filter: invert(74.6%); */
+  background-position-x: 1000px;
+}
+.card.red .one,
+.one {
+  animation: ination 25s infinite 0.05s ease;
+  z-index: 5;
+}
+.card.red .wave.two,
+.two {
+  top: -110px;
+  opacity: 0.65;
+  animation: ination 25s infinite 0.15s ease;
+  z-index: 6;
+}
+.card.red .three,
+.three {
+  background-position-x: -1000px;
+  animation: neination 25s infinite 0.05s ease;
+  top: -93px;
+  opacity: 0.77;
+  right: -3%;
+  z-index: 7;
+}
+
+@keyframes neination {
+  from {
+    background-position-x: 1000px;
+  }
+  to {
+    background-position-x: -1200px;
+  }
+}
+@keyframes ination {
+  from {
+    background-position-x: -1000px;
+  }
+  to {
+    background-position-x: 1100px;
+  }
+}
+
+.section-dots {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.25rem;
+  width: 100%;
+  height: 70px;
+}
+.section-count {
+  width: 0.61rem;
+  height: 0.61rem;
+  border-radius: 50%;
+  background-color: var(--dot-bg);
+  transition: inherit;
+}
+.card.pink .section-count.active,
+.card.pink .top {
+  background-color: var(--card-pink);
+}
+.card.red .section-count.active,
+.card.red .top {
+  background-color: var(--card-red);
+}
+.card.purple .section-count.active,
+.card.purple .top {
+  background-color: var(--card-third);
+}
+.bottom a {
+  text-align: center;
+  padding: 0.55rem 1.3rem;
+  font-size: 1.2rem;
+  background: transparent;
+  border: 1px solid var(--skip);
+  color: var(--skip);
+  border-radius: 1rem;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.2rem;
+}
+@media only screen and (min-width: 320px) {
+  .root {
+    padding: 4rem 0rem 10rem 0rem;
+  }
+  .card-holder {
+    flex-direction: column;
+  }
+  .card {
+    margin-bottom: 1.6rem;
+  }
+}
+@media only screen and (min-width: 375px) {
+  .root {
+    padding: 4rem 0rem 6rem 0rem;
+  }
+  .card {
+    margin-bottom: 1.3rem;
+  }
+}
+@media only screen and (min-width: 425px) {
+  .root {
+    padding: 2rem;
+  }
+  .card {
+    margin-bottom: 0;
+  }
+  .card-holder {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
