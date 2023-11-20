@@ -1,0 +1,223 @@
+:root {
+  --background: linear-gradient(
+    45deg,
+    rgba(196, 144, 254, 1) 39%,
+    rgba(231, 160, 190, 1) 57%
+  );
+  --login: #a06bed;
+  --signup: #f33c7f;
+  --fgp: #fc7da8;
+  --border-bottom: #dcc9f7;
+  --white: #fff;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  transition: all 0.15s ease-in-out;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+.root {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--background);
+}
+.page {
+  width: 300px;
+  height: 470px;
+  background-color: var(--white);
+  padding: 2.5rem 2.53rem;
+  border-radius: 5px;
+  position: relative;
+  z-index: 25;
+}
+.page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 95%;
+  margin: 0 auto;
+  transform: translateY(-14px);
+  background-color: #ffffffa5;
+  z-index: -1;
+}
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 91%;
+  margin: 0 auto;
+  transform: translateY(-28px);
+  background-color: #ffffff74;
+  z-index: -1;
+}
+.top {
+  text-align: center;
+}
+.top img {
+  /* width: 100px; */
+  height: 85px;
+  display: block;
+  margin: 1rem auto;
+}
+.top .title {
+  color: #465a63;
+  font-size: 2.15rem;
+  margin-bottom: 0.7rem;
+}
+.top .text {
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  margin-bottom: 0.75rem;
+  color: #74838a;
+}
+.middle {
+  display: block;
+  margin-top: 1.5rem;
+}
+label[for="user"],
+label[for="password"] {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  margin-bottom: 1.6rem;
+  cursor: default;
+}
+label[for="user"] input,
+label[for="password"] input {
+  display: block;
+  width: 100%;
+  height: 30px;
+  padding: 0.5rem 1.5rem 0.5rem 2.5rem;
+  outline: none;
+  border: none;
+  transition: inherit;
+  border: 4px solid transparent;
+}
+label[for="user"]:before,
+label[for="password"]:before {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 30%;
+  height: 3px;
+  background-color: transparent;
+  transition: inherit;
+}
+label[for="user"]:hover:before,
+label[for="password"]:hover:before {
+  width: 100%;
+  background-color: var(--border-bottom);
+}
+
+i {
+  font-family: "FontAwesome 6";
+  font-size: 1.35rem;
+  position: absolute;
+  top: 6.85px;
+  left: 0;
+  z-index: 10;
+}
+.check-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.check {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+}
+.check input {
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--login);
+  appearance: none;
+  position: relative;
+  transition: inherit;
+}
+.check input:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+.check input:checked:before {
+  opacity: 1;
+  background-color: var(--login);
+}
+.check input::after {
+  content: "\f00c";
+  color: #fff;
+  font-family: "FontAwesome";
+  position: absolute;
+  inset: 0;
+  text-align: center;
+  font-size: 1.3rem;
+  opacity: -50;
+  transform: translateX(-50px);
+}
+.check input:checked:after {
+  opacity: 1;
+  transform: translateX(0px);
+}
+.check span {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+.check-box a {
+  font-style: italic;
+  font-size: 1.23rem;
+  font-weight: 500;
+  color: var(--fgp);
+  transition: inherit;
+}
+.check-box a:hover {
+  font-style: normal;
+}
+.bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  text-align: center;
+  gap: 0.78rem;
+  margin-top: 2.2rem;
+}
+.bottom a {
+  display: block;
+  padding: 1.3rem 1.6rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  background-color: royalblue;
+  color: var(--white);
+  border-radius: 0.45rem;
+}
+.bottom a:first-child {
+  background-color: var(--login);
+}
+.bottom a:last-child {
+  background-color: var(--signup);
+}
+.bottom a:hover {
+  opacity: 0.7;
+}
