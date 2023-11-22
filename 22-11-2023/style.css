@@ -1,0 +1,248 @@
+:root {
+  --background: #d2ddf6;
+  --card: #f6f9ff;
+  --card2: #e5edff;
+  --white: #fff;
+  --one: #6792ff;
+  --two: #4473ea;
+  --three: #1a52e1;
+  --four: #96b3ff;
+  --title: #12163b;
+  --span: #595d78;
+  --see-more: #6c91ec;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  transition: all 0.15s ease-in-out;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Lato", sans-serif;
+}
+.root {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--background);
+}
+.card-holder {
+  position: relative;
+  z-index: 10;
+}
+.card {
+  padding: 3.8rem 4.2rem;
+  border-radius: 1rem;
+  width: 570px;
+  background-color: var(--card);
+  transition: inherit;
+}
+.card-holder:hover .card2 {
+  transform: translate(0);
+}
+.card2 {
+  position: absolute;
+  border-radius: 1rem;
+  inset: 0;
+  z-index: -1;
+  transform: translate(15px, 15px);
+  background-color: var(--card2);
+}
+
+.card h1 {
+  font-size: 2.1rem;
+  font-weight: 900;
+  font-family: "Merriweather", sans-serif;
+  color: var(--title);
+  margin-bottom: 0.35rem;
+}
+.card p {
+  color: #12163b;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.card h1 + p {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+.card h1 + p span {
+  margin-top: 0.345rem;
+  width: 3px;
+  height: 3px;
+  border-radius: 1.5px;
+  background-color: #12163b;
+}
+.progress {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.progress .right a {
+  display: block;
+  text-align: right;
+  color: royalblue;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  margin-top: 3rem;
+  text-decoration: underline;
+}
+.progress .right ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.progress .right ul li,
+.progress .right ul li p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+}
+.progress .right ul li p {
+  justify-content: space-between;
+  width: 100%;
+}
+.text {
+  text-align: left;
+}
+.one,
+.two,
+.three,
+.four {
+  background-color: #1a52e1;
+  width: 45%;
+  height: 3px;
+  transform: translateX(1rem);
+  border-radius: 1rem;
+}
+.two {
+  width: 35%;
+  transform: translateX(1.5rem);
+}
+.three {
+  width: 25%;
+  transform: translateX(6.2rem);
+}
+.four {
+  width: 11%;
+  transform: translateX(7.5rem);
+}
+.progress .right {
+  flex: 1;
+}
+.progress .left {
+  display: grid;
+  place-items: center;
+}
+.left {
+  position: relative;
+  margin-top: -4rem;
+}
+.left::before {
+  content: "Traffic Source";
+  position: absolute;
+  inset: 0;
+  transform: scale(0.8);
+  background-color: white;
+  font-size: 1.675rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.left svg path {
+  position: relative;
+}
+.left svg path:hover {
+  opacity: 0.8;
+}
+/* media screen media query*/
+@media only screen and (min-width: 0px) {
+  .root {
+    position: relative;
+    overflow: hidden;
+  }
+  .root:after {
+    content: "please View on bigger screen";
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 900;
+    color: #fff;
+    background-color: #12163b;
+    z-index: 100;
+  }
+}
+@media only screen and (min-width: 320px) {
+  .root {
+    position: static;
+  }
+  .root:after {
+    display: none;
+  }
+  .card {
+    width: 300px;
+  }
+  .progress {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .left {
+    margin: 0;
+  }
+  .three {
+    width: 25%;
+    transform: translateX(3.4rem);
+  }
+  .four {
+    width: 11%;
+    transform: translateX(4.3rem);
+  }
+}
+@media only screen and (min-width: 425px) {
+  .card {
+    width: 370px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .card {
+    width: 570px;
+  }
+  .progress {
+    flex-direction: row;
+  }
+  .left {
+    margin-top: -3.6rem;
+  }
+  .two {
+    width: 35%;
+    transform: translateX(1.5rem);
+  }
+  .three {
+    width: 25%;
+    transform: translateX(6.2rem);
+  }
+  .four {
+    width: 11%;
+    transform: translateX(7.5rem);
+  }
+}
