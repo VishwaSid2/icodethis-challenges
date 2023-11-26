@@ -1,0 +1,289 @@
+:root {
+  --background-root: #0d1536;
+  --header-bg: #f3f4f6;
+  --task-pending: #f66638;
+  --title: #1e1a50;
+  --subtitle: #777f96;
+  --padding-color: #f3f4f6;
+  --padding-inner-text: #1a2950;
+  --white: #fff;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.15s ease-in-out;
+  list-style-type: none;
+  text-decoration: none;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 3rem 0 0 0;
+  border-radius: 2rem;
+  /* overflow: hidden; */
+  background-color: var(--background-root);
+}
+.root {
+  /* min-height: 650px; */
+  padding: 2.75rem 4rem;
+  border-radius: 2rem;
+}
+header {
+  background-color: var(--header-bg);
+  width: 100%;
+  height: 70%;
+  padding-bottom: 2rem;
+  /* height: 285px; */
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  font-size: 1.6rem;
+  height: 70px;
+  overflow: hidden;
+}
+.sign,
+.account,
+.account a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.sign,
+.account {
+  gap: 2.5rem;
+}
+.account {
+  gap: 1rem;
+  font-weight: 500;
+}
+.account i {
+  color: var(--white);
+  background-color: #cfd4e2;
+  padding: 1.4rem 1.4rem;
+  border-radius: 1.5rem;
+  font-size: 2rem;
+}
+.right i.active {
+  color: royalblue;
+}
+.account a {
+  color: #979797;
+  font-size: 1.66rem;
+}
+.account img {
+  width: 18px;
+  height: 18px;
+  margin-left: 0.45rem;
+  transform: rotate(90deg);
+}
+nav > a {
+  font-size: 1.6rem;
+  color: #fff;
+  padding: 0.8rem 1.8rem;
+  background-color: #9b9b9b89;
+}
+
+.plus {
+  padding: 7rem 1.15rem 1.3rem 1.15rem;
+  background-color: var(--padding-inner-text);
+  color: var(--white);
+  border-radius: 1.1rem;
+  font-size: 1.5rem;
+  margin-top: -5.5rem;
+}
+.plus:hover {
+  margin-top: -3rem;
+}
+.submenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5.5rem;
+  color: var(--title);
+  font-size: 1.35rem;
+  height: 100px;
+}
+.submenu p {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--subtitle);
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+.submenu p span {
+  height: 4px;
+  width: 4px;
+  border-radius: 1rem;
+  background-color: var(--subtitle);
+}
+
+.submenu .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.2rem;
+}
+.submenu .right a {
+  font-size: 1.7rem;
+}
+
+main {
+  background-color: var(--white);
+  width: 100%;
+  height: 100%;
+  padding: 1rem 5rem 4rem 5rem;
+}
+.card-holder {
+  margin-top: -4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.85rem;
+  background-color: #fff;
+}
+
+.card {
+  padding: 1rem 1rem 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1.5rem;
+  /* border: 2px solid transparent; */
+  overflow: hidden;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.22);
+  background-color: var(--white);
+  position: relative;
+  z-index: 0;
+  border-radius: 1rem;
+}
+.card-holder.flex .card:hover {
+  background-color: #e9e9e9;
+  transform: scale(1.03) translateX(15px);
+  width: 98%;
+  margin: 0 auto;
+}
+.card:hover:before {
+  border-color: rgb(96, 101, 111);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border: 5px dashed transparent;
+  background-color: #fff;
+}
+
+.card .left {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-left: -1rem;
+  letter-spacing: 0.25px;
+}
+.card .right {
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
+  font-size: 1.34rem;
+  font-weight: 500;
+}
+
+.card .right a {
+  padding: 1rem 1.19rem;
+  color: rgb(96, 101, 111);
+  border-radius: 0.7rem;
+  background-color: hsl(250, 14%, 96%);
+  transition: all 0.1s ease-in-out;
+}
+.card:hover .right a {
+  background-color: rgb(96, 101, 111);
+  color: hsl(250, 14%, 96%);
+}
+
+.card .right p {
+  color: var(--task-pending);
+}
+
+.card img {
+  width: 65px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 1rem;
+  object-position: center;
+  position: relative;
+  z-index: 10;
+}
+/* grid mode */
+
+.card-holder.grids {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 500px));
+  place-items: center;
+}
+.card-holder.grid {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  justify-content:center;
+  gap:5rem;
+  align-items: center;
+  /* gap:2rem; */
+  flex-wrap: wrap;
+}
+.card-holder.grid .card {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 250px;
+  position: relative;
+  gap: 0.25rem;
+  width: 260px;
+  margin-bottom: 1rem;
+}
+.card-holder.grid .card:hover {
+  transform: translateX(0);
+}
+.card-holder.grid .card .left {
+  flex-direction: column;
+  margin-left: 0;
+  padding: 1.2rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+.card-holder.grid .card .left img {
+  margin-left: -2rem;
+  width: 70px;
+  height: 60px;
+}
+.card-holder.grid .card .right {
+  text-align: center;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.card-holder.grid .card .right a:last-child {
+  position: absolute;
+  top: 1.85rem;
+  right: 1rem;
+}
