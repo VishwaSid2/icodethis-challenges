@@ -1,0 +1,215 @@
+:root {
+  --bcg: #191b1c;
+  --red: #bc1d4a;
+  --white: #fff;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.15s ease-in-out;
+  /* list-style-type: none; */
+  text-decoration: none;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+.root {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 8rem 0 0 0;
+  background-color: var(--bcg);
+  color: var(--white);
+}
+section {
+  /* border: 2px solid royalblue; */
+  padding: 1.5rem 2.2rem;
+}
+section > h1 {
+  font-size: 2.1rem;
+}
+section > p,
+section > h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.price-container {
+  padding: 1rem;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.price-cards {
+  width: 250px;
+  height: 385px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 3.2rem 3.9rem;
+  background-color: #21262b;
+  border-radius: 0.5rem;
+  border: 2px solid transparent;
+}
+.price-cards:hover {
+  border: 2px solid royalblue;
+}
+.price-component p {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.35rem;
+  font-size: 1.4rem;
+}
+.price-component p input {
+  /* appearance: none; */
+  width: 37px;
+  margin-top: 1px;
+  position: relative;
+  transition: all 0.15s ease-in-out;
+  z-index: 100;
+}
+.price-component p input::before {
+  border-radius: 1rem;
+  padding: 0.89rem 1.35rem;
+  content: "";
+  position: absolute;
+  inset: 0;
+  transition: all 0.15s ease-in-out;
+  background-color: var(--red);
+}
+.price-component p input::after {
+  content: "";
+  position: absolute;
+  top: 0.1369rem;
+  margin-left: 1px;
+  background-color: var(--white);
+  width: 15px;
+  height: 15px;
+  transition: all 0.15s ease-in-out;
+  border-radius: 1rem;
+}
+.price-component p input:checked::after {
+  right: 2px;
+  transition: all 0.15s ease-in-out;
+}
+.price-cards.pro .bottom {
+  flex: 1;
+}
+/* .price-cards.pro .bottom ul{
+  margin-bottom:0.5rem;
+} */
+.price-cards .top h2 {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+.price-cards .top p {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+.price-cards .top p span {
+  margin-top: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.price-cards .top {
+  width: 100%;
+}
+#MAUs {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: 2px solid #ffffffbc;
+  display: block;
+  background-color: transparent;
+  color: var(--white);
+}
+#MAUs option {
+  background-color: #191b1c;
+}
+.month-active {
+  margin-top: 0.85rem;
+  display: block;
+  text-align: left;
+  font-size: 1.1rem;
+  color: var(--red);
+  margin-left: 12px;
+}
+.price-cards .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.price-cards .bottom ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-content: center;
+}
+.price-cards .bottom ul li {
+  font-size: 1.25rem;
+  list-style-type: none;
+  position: relative;
+  text-align: left;
+}
+.price-cards .bottom ul li::marker {
+  color: #bc1d4a;
+}
+.price-cards .bottom ul li::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 1rem;
+  position: absolute;
+  inset: 0;
+  left: -1.5rem;
+  top: 0.55rem;
+  background-color: var(--red);
+}
+.price-cards .bottom a {
+  display: inline-block;
+  padding: 0.85rem 3rem;
+  color: var(--white);
+  font-size: 1.28rem;
+  border: 1px solid var(--red);
+}
+.special {
+  background-color: var(--red);
+}
+.current-plan {
+  position: absolute;
+  top: -0.6rem;
+  left: 50%;
+  right: 0;
+  transform: translateX(-50%);
+  display: block;
+  width: 250px;
+  color: var(--white);
+  background-color: var(--red);
+  padding: 1.75rem 2rem 1.2rem 2rem;
+  text-align: center;
+  border-radius: 1rem;
+}
+.current-plan p {
+  font-size: 1.2rem;
+  margin-bottom: 0.45rem;
+  opacity: 0.8;
+}
+.current-plan h3 {
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>29-11-2023 Saas price cards</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="Images/29-11-2023 pricing_saas.webp" />
+    <!---GOOGLE FONTS AND FONTAWESOME-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@300;400;700;900&family=Montserrat:wght@300;400;500;600;700&family=Mulish:wght@300;400;500;600;700&family=Poppins:wght@400;500;600&family=Roboto:wght@400;500;700&family=Urbanist:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="root">
+      <section class="price-component">
+        <h1>Choose a plan</h1>
+        <p>Billed monthly <input type="checkbox" /> Billed anually</p>
+        <div class="price-container">
+          <div class="price-cards starter">
+            <div class="top">
+              <h2>Starter</h2>
+              <p>$19</p>
+            </div>
+            <div class="bottom">
+              <ul>
+                <li>500 MAUs</li>
+                <li>3 Projects</li>
+                <li>Unlimted Guides</li>
+                <li>Unlimited flows</li>
+                <li>Unlimited branded themes</li>
+                <li>Email support</li>
+              </ul>
+              <a href="#">Choose Plan</a>
+            </div>
+          </div>
+          <!---PRO-->
+          <div class="price-cards pro">
+            <div class="top">
+              <h2>Pro</h2>
+              <p>$99<span class="mon-anu">
+              /month 
+              </span></p>
+              <select name="MAUs" id="MAUs">
+                <option value="2500">2500 MAUs</option>
+                <option value="3000">3000 MAUs</option>
+                <option selected value="4000">4000 MAUs</option>
+              </select>
+              <span class="month-active">Monthly active users</span>
+            </div>
+            <div class="bottom">
+              <ul>
+                <li>All starter features,plus:</li>
+                <li>unlimited projects</li>
+                <li>Unlimited fully customizable themes</li>
+                <li>A dedicated Customer Success Manager</li>
+              </ul>
+              <a href="#" class="special">Choose Plan</a>
+            </div>
+          </div>
+          <!---ENTERPRISE-->
+          <div class="price-cards enter enterprises">
+            <div class="top">
+              <h2>Enterprises</h2>
+              <p>Let's Talk</p>
+            </div>
+            <div class="bottom">
+              <ul>
+                <li>All Pro features</li>
+                <li>Unlimited MAUs</li>
+                <li>Dedicated environment</li>
+                <li>Enterprises account administration</li>
+                <li>Premium support and services</li>
+              </ul>
+              <a href="#">Contact Us</a>
+            </div>
+          </div>
+        </div>
+        <div class="current-plan">
+          <p>Your current plan:</p>
+          <h3>Starter Trial + 500MAUs</h3>
+        </div>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
