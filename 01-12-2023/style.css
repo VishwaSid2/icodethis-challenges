@@ -1,0 +1,78 @@
+:root {
+  --bg: #a2b2bf;
+  --white: #fff;
+}
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.15s ease-in-out;
+  text-decoration: none;
+  list-style-type: none;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Lato", sans-serif;
+}
+.root {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--bg);
+}
+.xmass-container {
+  border-radius: 1rem;
+  width: 62.5%;
+  margin: 0 auto;
+  height: 70%;
+  background: url(Images/SVG.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(237, 10, 10, 0.722);
+  color: white;
+  padding: 10rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.15rem;
+}
+.xmass-container h1 {
+  font-size: 3.1rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+.xmass-container p {
+  opacity: 0.75;
+  font-size: 1.34rem;
+}
+
+.xmass-container .bottom {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(30px, 82px));
+  grid-template-rows: 1;
+  gap: 0.575rem;
+  margin-top: 2.8rem;
+  transform: scale(1.1);
+}
+.xmass-container .bottom .time {
+  text-align: center;
+  padding: 1.9rem 1.9rem;
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  color: #305d70;
+}
+.xmass-container .bottom .time h1 {
+  font-size: 3.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.56rem;
+  font-weight: 900;
+}
+.xmass-container .bottom .time p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.15px;
+}
