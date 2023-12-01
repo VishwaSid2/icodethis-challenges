@@ -76,3 +76,28 @@ html {
   font-weight: 600;
   letter-spacing: 0.15px;
 }
+@media only screen and (min-width:320px){
+  .xmass-container{
+    width: 88%;
+    height: 80%;
+    padding:4rem 1rem;
+  }
+  .xmass-container .bottom{
+    grid-template-columns: repeat(2, minmax(30px, 82px));
+  }
+  .xmass-container .bottom .time{
+   box-shadow: 1px 1px 3px rgb(0, 0, 0);
+  }
+}
+@media only screen and (min-width:425px){
+  .xmass-container{
+    padding:10rem 1rem;
+  }
+  .xmass-container .bottom{
+    padding:0 1rem;
+    grid-template-columns: repeat(4, minmax(30px, 82px));
+  }
+  .xmass-container .bottom .time{
+    box-shadow: 1px 1px 3px rgba(0, 0, 0,0.5);
+   }
+}
