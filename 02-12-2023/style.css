@@ -79,8 +79,13 @@ html {
   color: var(--container-color);
 }
 .items-showcase .item.dis {
-  border: 2px solid var(--disc);
   position: relative;
+}
+.items-showcase.dis .item.new {
+  border: 2px solid transparent;
+}
+.items-showcase.dis .item.dis {
+  border: 2px solid var(--disc);
 }
 .items-showcase .item.dis::after {
   content: "-23%";
@@ -92,19 +97,17 @@ html {
   background-color: var(--disc);
   color: var(--container-color);
 }
-img {
-  width: 100px;
-  height: 100px;
-}
+
 .bottom {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: flex-start;
   width: 72%;
+  height: 45%;
   margin: 0 auto;
-  gap: 2rem;
-  background-color: #197590;
+  gap: 2.5rem;
+  /* background-color: #fff;  */
 }
 .bottom .image-container {
   position: relative;
@@ -119,13 +122,66 @@ img {
   background-color: var(--backgroundd);
   color: var(--container-color);
 }
-.bottom .image-container img {
-  width: 200px;
+.bottom .image-container {
+  width: 350px;
   height: 200px;
 }
+.bottom .image-container img {
+  width: 100%;
+  height: 100%;
+}
 .bottom .item-info {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  /* gap: 0.51rem; */
+  /* background-color: #e55a53; */
+}
+.bottom .item-info > p {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.bottom .item-info > p:nth-child(1) {
+  color: #000006;
+  margin-bottom: 0.385rem;
+}
+.bottom .item-info > p:nth-child(2) {
+  color: #00020a;
+  font-size: 1.65rem;
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+}
+.bottom .item-info p:nth-child(4) {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  text-align: left;
+  color: #677179;
+  font-weight: 400;
+}
+.rating i {
+  margin-top: 0.15rem;
+  font-size: 1.24rem;
+  color: var(--star);
+}
+.bottom .item-info .link {
+  flex: 1;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: flex-end;
+  /* width: 100%; */
+  /* background-color: red; */
+}
+.bottom .item-info .link a i {
+  margin-left: 0.51rem;
+}
+.bottom .item-info .link a {
+  font-size: 1.35rem;
+  padding: 0.75rem 1.3rem;
+  color: #fff;
+  background-color: var(--new);
 }
