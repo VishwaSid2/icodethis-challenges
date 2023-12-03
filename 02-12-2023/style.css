@@ -246,11 +246,7 @@ html {
   .bottom .image-container {
     width: 45%;
   }
-  .items-container {
-    /* height: 90%; */
-  }
-  .bottom {
-  }
+
   .bottom div+ p{
     width: 85%;
   }
