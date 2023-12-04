@@ -64,31 +64,31 @@ html {
   gap: 0.5rem;
   position: relative;
 }
-.xmas-order-page.right::before{
-  content: '20%';
+.xmas-order-page.right::before {
+  content: "20%";
   position: absolute;
-  top:-2.2rem;
-  left:0.51rem;
-  font-size: 1.14rem;
+  top: -2.65rem;
+  left: 0.51rem;
+  font-size: 1rem;
   font-weight: 800;
   color: var(--after-color);
   background-color: var(--after-bg);
   text-align: center;
-  padding:1.25rem 0.7rem;
+  padding: 1rem 0.5rem;
   border-radius: 50%;
   opacity: 0.7;
-  transform: rotate(336deg);
-
+  transform: rotate(336deg) scale(0.97);
 }
+
 .xmas-order-page.right::after {
   content: "X";
   padding: 0.75rem;
   color: #000;
   position: absolute;
-  top: -2.2rem;
+  top: -2.7rem;
   font-size: 1.5rem;
   right: 0.1rem;
-  padding:1rem 1.25rem;
+  padding: 1rem 1.25rem;
   border-radius: 50%;
   /* background-color: #ff0000; */
 }
@@ -123,8 +123,15 @@ p {
   width: 100%;
 }
 input {
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.85rem;
   text-align: left;
+  width: 100%;
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: 2rem;
+}
+input:focus-within {
+  border: 1px solid var(--btn);
 }
 
 .lower {
@@ -146,4 +153,72 @@ a,
 .lower a {
   background-color: transparent;
   color: var(--p);
+}
+
+@media only screen and (min-width: 425px) {
+  .xmas-order-page {
+    flex-wrap: nowrap;
+    align-items: stretch;
+    width: 75%;
+  }
+  .xmas-design.left {
+    width: 35%;
+    border-radius: 0rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+  }
+  .xmas-design.left img {
+    width: 100%;
+    height: 100%;
+  }
+  .xmas-order-page.right {
+    padding: 1.25rem 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 0rem;
+    width: 67%;
+    justify-content: space-between;
+  }
+  .xmas-order-page.right::after {
+    top: -0.3rem;
+    right: -0.4rem;
+  }
+  .xmas-order-page.right::before {
+    top: 0.6rem;
+    left: -0.6rem;
+  }
+  .jingle.tops {
+    flex: 1;
+  }
+
+  .jingle.bottom,
+  .jingle.bottom .top,
+  .jingle.bottom .lower {
+    width: 100%;
+  }
+
+  .xmas-order-page.right .jingle.bottom,
+  .jingle.bottom .top,
+  .jingle.tops {
+    width: 100%;
+  }
+  .xmas-order-page.right .jingle.bottom {
+    justify-content: space-between;
+    flex: 1.5;
+  }
+  .jingle.bottom .top {
+    gap: 0.52rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .xmas-order-page {
+    width: 450px;
+    height: 65%;
+  }
+  .xmas-order-page.right {
+    width: 100%;
+    height: 100%;
+  }
+  .xmas-design.left {
+    width: 46%;
+  }
 }
