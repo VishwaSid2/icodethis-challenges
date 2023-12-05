@@ -1,0 +1,234 @@
+:root {
+  --coupon-bg: #fcd6cf;
+  --search-bg: #eff3f6;
+  --placeholder: #9ea1a9;
+  --cart-icon: #e35951;
+  --bcg: #1a7592;
+  --white: #fff;
+  --black: #000;
+}
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  transition: all 0.15s ease-in-out;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+.root {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--bcg);
+}
+header {
+  width: 60%;
+  background-color: var(--white);
+}
+.coupon-code {
+  width: 100%;
+  text-align: center;
+  background-color: var(--coupon-bg);
+  padding: 0.85rem 1rem;
+}
+.coupon-code a {
+  display: block;
+  font-size: 1.35rem;
+  color: var(--black);
+  /* background-color: royalblue; */
+}
+.coupon-code .coupon-container {
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+}
+.spans {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.34rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.coupon-code .coupon-container.active::after {
+  content: "\f0c9";
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: "FontAwesome";
+  font-size: 1.34rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+nav {
+  /* height: 65px; */
+  width: 94%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.2rem;
+  gap: 1rem;
+}
+
+nav .left,
+nav .right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.hide {
+  display: none;
+}
+/*Right Section*/
+nav .right {
+  justify-content: space-between;
+  gap: 1.8rem;
+}
+nav .right ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+nav .right ul li a {
+  color: black;
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+nav .right ul li a:hover,
+h1:hover {
+  color: var(--cart-icon);
+}
+.cart {
+  position: relative;
+}
+.cart a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.cart a i {
+  color: black;
+  font-size: 1.65rem;
+}
+.cart::after {
+  content: "3";
+  color: var(--white);
+  background-color: var(--cart-icon);
+  padding: 0.3rem 0.6rem;
+  border-radius: 50%;
+  position: absolute;
+  top: -0.55rem;
+  left: 0.31rem;
+  transform: scale(0.6);
+}
+
+/* Left Section*/
+nav .left {
+  gap: 1.5rem;
+}
+nav .left h1 {
+  font-size: 1.86rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+nav .left .search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.search input {
+  width: 150px;
+  padding: 0.68rem 1rem 0.68rem 2.4rem;
+  border-radius: 4rem;
+  border: 2px solid transparent;
+  outline: none;
+  background-color: var(--search-bg);
+}
+.search input::placeholder {
+  font-size: 1.3rem;
+  color: var(--placeholder);
+}
+.search input:focus {
+  border: 2px solid royalblue;
+}
+.search i {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+@media only screen and (max-width: 1440px) {
+  .span-bar {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  nav .right {
+    display: none;
+  }
+  nav {
+    position: relative;
+  }
+  .span-bar {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+    font-family: "FontAwesome";
+    font-size: 1.34rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 528px) {
+  .coupon-container a {
+    font-size: 1rem;
+    width: 80%;
+  }
+  .search {
+    width: 40%;
+  }
+  .search input {
+    position: relative;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  nav .left .search {
+    display: none;
+  }
+  .root::after {
+    display: none;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .root {
+    position: relative;
+    overflow: hidden;
+  }
+  .root::after {
+    overflow: hidden;
+    content: "PLEASE VIEW ON BIGGER SCREENS";
+    color: var(--white);
+    inset: 0;
+    background-color: #000;
+    position: absolute;
+    display: grid;
+    place-items: center;
+  }
+}
