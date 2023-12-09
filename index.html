@@ -5,25 +5,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <style>
+      :root {
+        --white: #fff;
+        --black: #000;
+        --custom-bg-nigh: #ffffffc8;
+        --custom-bg-light: #242425;
+      }
       * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-        color: #fff;
+        color: var(--white);
         text-decoration: none;
         font-family: sans-serif;
       }
       html {
         font-size: 62.5%;
       }
+      .active {
+        --white: #000;
+        --black: #fff;
+        --custom-bg-nigh: #242425;
+        --custom-bg-light: #ffffffc8;
+        transition: all .5s ease-in-out;
+      }
       body {
+        transition: all .5s ease-in-out;
         /* height: 100vh; */
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: #000;
-        color: #fff;
+        background-color: var(--black);
+        color: var(--white);
       }
 
       .root {
@@ -37,9 +51,9 @@
       .root a {
         padding: 1.27rem 1.7rem;
         backdrop-filter: blur(100px);
-        background-color: #ffffffc8;
+        background-color: var(--custom-bg-nigh);
         border-radius: 10px;
-        color: #000;
+        color: var(--black);
         transition: all 0.15s ease;
         letter-spacing: 1.5px;
         text-align: center;
@@ -143,5 +157,12 @@
         <a href="./07-12-2023/index.html">37 I'code Xmas Filter </a>
       </div>
     </div>
+    <script>
+      const ico = document.querySelector("h1");
+      const body = document.querySelector("body");
+      ico.addEventListener("mouseover", () => {
+        body.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
