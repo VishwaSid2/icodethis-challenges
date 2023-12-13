@@ -27,10 +27,10 @@
         --black: #fff;
         --custom-bg-nigh: #242425;
         --custom-bg-light: #ffffffc8;
-        transition: all .5s ease-in-out;
+        transition: all 0.5s ease-in-out;
       }
       body {
-        transition: all .5s ease-in-out;
+        transition: all 0.5s ease-in-out;
         /* height: 100vh; */
         display: flex;
         flex-direction: column;
@@ -47,6 +47,42 @@
         align-items: center;
         gap: 1.4rem;
         font-size: 1.3rem;
+        position: relative;
+      }
+      .rtd {
+        display: grid;
+        place-items: center;
+        position: absolute;
+        inset: 0;
+        padding: 1rem;
+        font-size: 5rem;
+        background-color: black;
+        z-index: 200;
+        animation: spin 1.5s infinite ease;
+      }
+      .rtd span {
+        padding: 1.2rem 2.5rem;
+        border-radius: 50%;
+        position: relative;
+        z-index: 1190;
+      }
+      .rtd span::after {
+        content: "X";
+        display: grid;
+        place-items: center;
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(red, blue);
+        z-index: 50;
+        border-radius: 50%;
+      }
+      @keyframes spin {
+        from {
+          transform: rotate(0deg) scale(1.05);
+        }
+        to {
+          transform: rotate(360deg) scale(1.55);
+        }
       }
       .root a {
         padding: 1.27rem 1.7rem;
@@ -114,6 +150,7 @@
   </head>
   <body>
     <div class="root">
+      <div class="rtd"><span>X</span></div>
       <h1>ICODETHIS CHALLENGES >></h1>
       <div class="link-container">
         <a href="./03-11-2023/index.html">03-PRICING CARD</a>
@@ -162,6 +199,14 @@
       const body = document.querySelector("body");
       ico.addEventListener("mouseover", () => {
         body.classList.toggle("active");
+      });
+      const rtd = document.querySelector(".rtd");
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          rtd.style.height = "0px";
+          rtd.style.display = "none";
+          console.log(rtd);
+        }, 3000);
       });
     </script>
   </body>
